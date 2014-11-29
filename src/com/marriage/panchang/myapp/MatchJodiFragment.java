@@ -30,6 +30,8 @@ import static android.provider.BaseColumns._ID;
 
 // TODO
 // History - update tab
+// Ability to update the additional details of partner
+// Display Panchang
 public class MatchJodiFragment extends Fragment {
 
     GoonMatcher goonMatcher;
