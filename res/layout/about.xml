@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <TextView
+            android:text="Application is used to get approximate match between groom and bride. Rules are used from DATE Panchang. \nCurrently applicaiton uses following tables from Panchang:\n\nAvkahada Chakra (Pg.8,9)\nGhatil Gun Melan Koshtak (Pg.12,13)\nNadipadvedh Koshtak\n\nFor any suggestions please contact ravindra.vit2007@gmail.com\nThank you for choosing application."
+            android:id="@+id/AboutDescription"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+    </TextView>
+
+    <RelativeLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+        <TextView
+                android:text="Ravindra Daramwar"
+                android:id="@+id/OwnerName"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

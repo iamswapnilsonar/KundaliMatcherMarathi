@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font_size">40dp</string>
+
+    <string name="app_name">Kundali Matcher (Marathi)</string>
+
+    <string name="groom_name_head">Groom Birth Name</string>
+    <string name="bride_name_head">Bride Birth Name</string>
+    <string name="bride_name">Bride</string>
+    <string name="groom_name">Groom</string>
+    <string name="submit_button">Match</string>
+
+    <string name="Match_Result">Result</string>
+
+    <string name="col_info">Mahiti</string>
+    <string name="col_groom">Groom</string>
+    <string name="col_bride">Bride</string>
+
+    <string name="firstchar">First Character</string>
+    <string name="charnakshar">Charnakshar</string>
+    <string name="charnank">Charnank</string>
+    <string name="nadi">Nadi</string>
+    <string name="ras">Ras</string>
+    <string name="nakshatra">Nakshatra</string>
+
+    <string name="col_goon">Goon</string>
+    <string name="col_dosh">Dosh</string>
+    <string name="col_dosh_details">About Dosh</string>
+
+
+    <string name="match_details">Match Details</string>
+    <string name="Jodi_Matcher">Match Jodi</string>
+    <string name="Retrieve_Info">Get Details</string>
+    <string name="Display_Panchang">View Panchang</string>
+    <string-array name="actionBarTabs">
+        <item>Match Jodi</item>
+        <item>Person Details</item>
+        <item>Panchang</item>
+        <item>About</item>
+    </string-array>
+</resources>

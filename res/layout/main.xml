@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="2dp"
+            >
+        <TextView
+                android:textColor="@color/HeaderText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/groom_name_head"
+                android:gravity="center"
+                />
+        <TextView
+                android:textColor="@color/HeaderText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bride_name_head"
+                android:gravity="center"
+                />
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+            >
+        <com.marriage.panchang.myapp.CustomAutoCompleteTextView
+                android:id="@+id/groom_name"
+                android:completionThreshold="1"
+                android:textColor="@color/EditBoxText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/groom_name"
+                android:gravity="center"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:focusableInTouchMode="true"
+                />
+        <com.marriage.panchang.myapp.CustomAutoCompleteTextView
+                android:id="@+id/bride_name"
+                android:completionThreshold="1"
+                android:textColor="@color/EditBoxText"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/bride_name"
+                android:gravity="center"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:focusableInTouchMode="true"
+                />
+
+    </LinearLayout>
+    <Button
+            android:id="@+id/submit_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="@dimen/font_size"
+            android:layout_alignParentLeft="true"
+            android:background="@color/ButonBackground"
+            android:text="@string/submit_button"
+            android:layout_gravity="center"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/ButonText" />
+
+    <TextView
+            android:id="@+id/Match_Result"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/font_size"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Match_Result"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/HeaderText" />
+    <TextView
+            android:text="Single-line text view that scrolls automatically if the text is too long to fit in the widget"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit ="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+
+    <TableLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+            >
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/Col_Head"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/col_info"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+
+            <TextView
+                    android:id="@+id/col_head_groom"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:text="@string/col_groom"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_head_bride"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:text="@string/col_bride"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+
+        </TableRow>
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_charnakshar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/charnakshar"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_charnakshar_groom"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_charnakshar_bride"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+
+        </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_ras"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/ras"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_ras_groom"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_ras_bride"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center"
+                    android:textColor="@color/Font" />
+
+        </TableRow>
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_nadi"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nadi"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_nadi_groom"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_nadi_bride"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+
+        </TableRow>
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_nakshatra"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/nakshatra"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_nakshatra_groom"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_nakshatra_bride"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+
+        </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_charnank"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/charnank"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_charnank_groom"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:gravity="center"
+                    android:textColor="@color/Font" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_charnank_bride"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+
+        </TableRow>
+     </TableLayout>
+
+    <TextView
+            android:id="@+id/match_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/font_size"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/match_details"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/HeaderText" />
+
+    <TableLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+            >
+
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_goon"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/col_goon"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_goon_value"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+        </TableRow>
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_dosh"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/col_dosh"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_dosh_value"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+        </TableRow>
+        <TableRow
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="1dp">
+            <TextView
+                    android:id="@+id/col_dosh_meaning"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/col_dosh_details"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/ColumnHeaderFont" />
+            <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/LineColor"/>
+            <TextView
+                    android:id="@+id/col_dosh_meaning_value"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/Font" />
+        </TableRow>
+    </TableLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
